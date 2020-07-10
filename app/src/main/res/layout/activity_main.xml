@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+    <!--Your comment
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="38.726539"
+        mapbox:mapbox_cameraTargetLng="35.479980"
+        mapbox:mapbox_cameraZoom="11.526846"/>
+        -->
+    <TextView
+        android:id="@+id/tx_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/architects_daughter"
+        android:text="@string/app_name"
+        android:textSize="35sp" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_buttons"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tx_header"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:id="@+id/btn_sync"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@android:color/holo_blue_light"
+            android:layout_marginEnd="5dp"
+            android:text="@string/sync_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:id="@+id/btn_openMap"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginStart="5dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="@string/open_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tx_last_sync_leading"
+        android:layout_below="@id/linear_layout_buttons"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/last_sync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tx_last_sync"
+        android:layout_alignBaseline="@id/tx_last_sync_leading"
+        android:layout_toEndOf="@id/tx_last_sync_leading"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/divider_0"
+        android:layout_below="@id/tx_last_sync_leading"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rw_containerList"
+        android:layout_below="@id/divider_0"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Waste Picker</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoibWtlbWFsOTgiLCJhIjoiY2s4ZGpiMnc4MHdibjNldHFoazg0ZDd5ZSJ9.H11ZmDN6ZGSOlPH9UU9TMQ</string>
+    <string name="container_id">Container ID:</string>
+    <string name="sync_data">Sync Data</string>
+    <string name="open_navigation">Open Navigation</string>
+    <string name="active_connection_count">Connection Count:</string>
+    <string name="container_lat">Latitude:</string>
+    <string name="container_lng">Longitude:</string>
+    <string name="last_sync">Last Sync:</string>
+    <string name="not_synced">Not Synced:</string>
+    <string name="title_activity_navigation">Map</string>
+    <string name="draw_path">Draw Path</string>
+    <string name="start_navigation">Navigate</string>
+</resources>

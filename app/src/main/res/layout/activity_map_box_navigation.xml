@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapBoxNavigationActivity">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapboxMapView"
+        mapbox:mapbox_cameraTargetLat="-15.776719"
+        mapbox:mapbox_cameraTargetLng="-47.878446"
+        mapbox:mapbox_cameraZoom="12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/edt_origin"
+            android:hint="Origin"
+            android:layout_marginEnd="5dp"
+            android:inputType="number"
+            android:layout_width="80dp"
+            android:layout_height="40dp"/>
+
+        <EditText
+            android:id="@+id/edt_destination"
+            android:hint="destination"
+            android:layout_marginStart="5dp"
+            android:inputType="number"
+            android:layout_width="100dp"
+            android:layout_height="40dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_draw_path_mapBox"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="@string/draw_path" />
+
+        <Button
+            android:id="@+id/btn_start_navigation_mapBox"
+            android:text="@string/start_navigation"
+            android:layout_marginStart="5dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@android:color/holo_green_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</RelativeLayout>
